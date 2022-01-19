@@ -23,9 +23,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      cd "$($System.DefaultWorkingDirectory)\src\AdoPipelines.Logger.Sample\bin\Debug\net6.0"
       .\AdoPipelines.Logger.Sample.exe -t log
       .\AdoPipelines.Logger.Sample.exe -t issue
       .\AdoPipelines.Logger.Sample.exe -t group
       .\AdoPipelines.Logger.Sample.exe -t command
       .\AdoPipelines.Logger.Sample.exe -t progress
+    workingDirectory: '$(System.DefaultWorkingDirectory)\src\AdoPipelines.Logger.Sample\bin\Debug\net6.0'
