@@ -62,8 +62,9 @@ static void LogIssue()
 static void LogCommand()
 {
     var logger = new AdoPipelinesLogger(new LogMessageFactory());
-    logger.LogCommand("task.setvariable", "\"Variable value\"",  new Dictionary<string, string>
+    logger.LogCommand("task.setvariable", "secretvalue",  new Dictionary<string, string>
     {
+        {"variable", "secret"},
         {"issecret", "true"}
     });
 }
