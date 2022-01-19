@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using AdoPipelinesLogger.Enums;
 using AutoFixture.NUnit3;
@@ -71,5 +72,57 @@ public class AdoPipelinesLoggerTests
         // Assert
         var stringOutput = _output.ToString().Split( Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
         stringOutput.Should().Equal($"##[group]{groupName}", $"##[debug]{logMessage}", "##[endgroup]");
+    }
+    
+    [Test, AutoData]
+    public void LogIssue_WritesLinesToConsole(string message, string sourcePath, int lineNumber, int columnNumber, string code)
+    {
+        // Arrange
+        var factory = new LogMessageFactory();
+        var sut = new AdoPipelinesLogger(factory);
+        
+        // Act
+        sut.LogIssue(LogIssueType.Warning, message, sourcePath, lineNumber, columnNumber, code);
+        
+        // Assert
+        var stringOutput = _output.ToString().Split( Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+        stringOutput.Should().Equal($"##vso[task.logissue type=warning;sourcepath={sourcePath};linenumber={lineNumber};columnnumber={columnNumber};code={code};]{message}");
+    }
+    
+    [Test, AutoData]
+    public void LogCommand_WithParameters_WritesLinesToConsole(string command, string value)
+    {
+        // Arrange
+        var factory = new LogMessageFactory();
+        var parameters = new Dictionary<string, string>
+        {
+            {"parameter1", "value1"},
+            {"parameter2", "value2"}
+        };
+        
+        var sut = new AdoPipelinesLogger(factory);
+        
+        // Act
+        sut.LogCommand(command, value, parameters);
+        
+        // Assert
+        var stringOutput = _output.ToString().Split( Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+        stringOutput.Should().Equal($"##vso[{command} parameter1=value1;parameter2=value2;]{value}");
+    }
+    
+    [Test, AutoData]
+    public void LogProgress_WritesLinesToConsole(string message, int value)
+    {
+        // Arrange
+        var factory = new LogMessageFactory();
+        
+        var sut = new AdoPipelinesLogger(factory);
+        
+        // Act
+        sut.LogProgress(message, value);
+        
+        // Assert
+        var stringOutput = _output.ToString().Split( Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+        stringOutput.Should().Equal($"##vso[task.setprogress value={value};]{message}");
     }
 }

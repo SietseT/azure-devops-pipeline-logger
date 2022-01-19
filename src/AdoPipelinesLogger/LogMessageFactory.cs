@@ -11,6 +11,16 @@ public class LogMessageFactory : ILogMessageFactory
         var logType = GetLogFormatType(logFormat);
         return $"##[{logType}]{message}";
     }
+    
+    public string BuildCommandLog(string command, string value, Dictionary<string, string>? parameters = null)
+    {
+        if (parameters == null || !parameters.Any()) return $"##vso[{command}]{value}";
+        
+        var parameterStrings = parameters.Select(p => $"{p.Key}={p.Value}");
+        var parameterString = string.Join(';', parameterStrings);
+        return $"##vso[{command} {parameterString};]{value}";
+
+    }
 
     public string BuildIssueLog(LogIssueType issueType, string message, string? sourcePath = null, int? lineNumber = null,
         int? columnNumber = null, string? code = null)
