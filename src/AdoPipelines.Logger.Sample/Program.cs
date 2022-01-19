@@ -55,6 +55,7 @@ static void LogGroup()
 static void LogIssue()
 {
     var logger = new AdoPipelinesLogger(new LogMessageFactory());
+    logger.Log(LogFormat.Section, "The two loglines below will show up in the build log of the pipeline.");
     logger.LogIssue(LogIssueType.Warning, "This is a warning message");
     logger.LogIssue(LogIssueType.Error, "This is a error message");
 }
