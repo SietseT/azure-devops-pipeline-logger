@@ -2,6 +2,11 @@ pool:
   vmImage: windows-latest
 
 steps:
+- task: UseDotNet@2
+  displayName: 'Use .NET 6.x'
+  inputs:
+    packageType: 'sdk'
+    version: '6.x'
 - task: NuGetCommand@2
   displayName: 'Restore NuGet packages'
   inputs:
