@@ -56,13 +56,12 @@ static void LogIssue()
 {
     var logger = new AdoPipelinesLogger(new LogMessageFactory());
     logger.LogIssue(LogIssueType.Warning, "This is a warning message");
-    logger.LogIssue(LogIssueType.Error, "This is a error message");
 }
 
 static void LogCommand()
 {
     var logger = new AdoPipelinesLogger(new LogMessageFactory());
-    logger.LogCommand("task.setvariable", "Variable value",  new Dictionary<string, string>
+    logger.LogCommand("task.setvariable", "\"Variable value\"",  new Dictionary<string, string>
     {
         {"issecret", "true"}
     });
