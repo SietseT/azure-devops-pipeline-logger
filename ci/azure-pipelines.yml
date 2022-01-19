@@ -1,0 +1,26 @@
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: NuGetCommand@2
+  displayName: 'Restore NuGet packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+- task: PowerShell@2
+  displayName: 'Example logs'
+  inputs:
+    targetType: 'inline'
+    script: |
+      cd "$($System.DefaultWorkingDirectory)\src\AdoPipelines.Logger.Sample\bin\Debug\net6.0"
+      .\AdoPipelines.Logger.Sample.exe -t log
+      .\AdoPipelines.Logger.Sample.exe -t issue
+      .\AdoPipelines.Logger.Sample.exe -t group
+      .\AdoPipelines.Logger.Sample.exe -t command
+      .\AdoPipelines.Logger.Sample.exe -t progress
