@@ -62,9 +62,9 @@ static void LogIssue()
 static void LogCommand()
 {
     var logger = new AdoPipelinesLogger(new LogMessageFactory());
-    logger.LogCommand("task.logdetail", "create new timeline record",  new Dictionary<string, string>
+    logger.LogCommand("task.setvariable", "Variable value",  new Dictionary<string, string>
     {
-        {"id", Guid.NewGuid().ToString()}
+        {"issecret", "true"}
     });
 }
 
