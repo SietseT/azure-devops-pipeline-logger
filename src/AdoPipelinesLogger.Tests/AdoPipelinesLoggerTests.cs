@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using AdoPipelinesLogger.Enums;
+using AdoPipelines.Logger.Enums;
 using AutoFixture.NUnit3;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace AdoPipelinesLogger.Tests;
+namespace AdoPipelines.Logger.Tests;
 
 public class AdoPipelinesLoggerTests
 {
@@ -30,7 +30,7 @@ public class AdoPipelinesLoggerTests
     {
         // Arrange
         var factory = new LogMessageFactory();
-        var logger = new AdoPipelinesLogger(factory);
+        var logger = new AdoPipelines.Logger.AdoPipelinesLogger(factory);
         
         // Act
         logger.Log(LogFormat.Debug, logMessage);
@@ -45,7 +45,7 @@ public class AdoPipelinesLoggerTests
     {
         // Arrange
         var factory = new LogMessageFactory();
-        var logger = new AdoPipelinesLogger(factory);
+        var logger = new AdoPipelines.Logger.AdoPipelinesLogger(factory);
         
         // Act
         logger.Log(LogFormat.Debug, logMessage1);
@@ -61,7 +61,7 @@ public class AdoPipelinesLoggerTests
     {
         // Arrange
         var factory = new LogMessageFactory();
-        var sut = new AdoPipelinesLogger(factory);
+        var sut = new AdoPipelines.Logger.AdoPipelinesLogger(factory);
         
         // Act
         sut.StartLogGroup(groupName, logger =>
@@ -79,7 +79,7 @@ public class AdoPipelinesLoggerTests
     {
         // Arrange
         var factory = new LogMessageFactory();
-        var sut = new AdoPipelinesLogger(factory);
+        var sut = new AdoPipelines.Logger.AdoPipelinesLogger(factory);
         
         // Act
         sut.LogIssue(LogIssueType.Warning, message, sourcePath, lineNumber, columnNumber, code);
@@ -100,7 +100,7 @@ public class AdoPipelinesLoggerTests
             {"parameter2", "value2"}
         };
         
-        var sut = new AdoPipelinesLogger(factory);
+        var sut = new AdoPipelines.Logger.AdoPipelinesLogger(factory);
         
         // Act
         sut.LogCommand(command, value, parameters);
@@ -116,7 +116,7 @@ public class AdoPipelinesLoggerTests
         // Arrange
         var factory = new LogMessageFactory();
         
-        var sut = new AdoPipelinesLogger(factory);
+        var sut = new AdoPipelines.Logger.AdoPipelinesLogger(factory);
         
         // Act
         sut.LogProgress(message, value);

@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelinesLogger", "AdoPipelinesLogger\AdoPipelinesLogger.csproj", "{31539674-920C-43D9-9838-BD0B25A5FD8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelines.Logger", "AdoPipelines.Logger\AdoPipelines.Logger.csproj", "{31539674-920C-43D9-9838-BD0B25A5FD8F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelinesLogger.Tests", "AdoPipelinesLogger.Tests\AdoPipelinesLogger.Tests.csproj", "{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelines.Logger.Sample", "AdoPipelines.Logger.Sample\AdoPipelines.Logger.Sample.csproj", "{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +20,9 @@ Global
 		{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -5,6 +5,10 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
+
+        <AssemblyName>AdoPipelines.Logger.Tests</AssemblyName>
+
+        <RootNamespace>AdoPipelines.Logger.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AdoPipelinesLogger\AdoPipelinesLogger.csproj" />
+      <ProjectReference Include="..\AdoPipelines.Logger\AdoPipelines.Logger.csproj" />
     </ItemGroup>
 
 </Project>

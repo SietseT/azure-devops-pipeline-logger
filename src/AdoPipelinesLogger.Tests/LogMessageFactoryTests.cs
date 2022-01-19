@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using AdoPipelinesLogger.Enums;
+using AdoPipelines.Logger.Enums;
 using AutoFixture.NUnit3;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace AdoPipelinesLogger.Tests;
+namespace AdoPipelines.Logger.Tests;
 
 public class LogMessageFactoryTests
 {
