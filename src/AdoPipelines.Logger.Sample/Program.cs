@@ -56,6 +56,7 @@ static void LogIssue()
 {
     var logger = new AdoPipelinesLogger(new LogMessageFactory());
     logger.LogIssue(LogIssueType.Warning, "This is a warning message");
+    logger.LogIssue(LogIssueType.Error, "This is a error message");
 }
 
 static void LogCommand()
