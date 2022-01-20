@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AdoPipelines.Logger\AdoPipelines.Logger.csproj" />
+      <ProjectReference Include="..\..\src\AdoPipelines.Logger\AdoPipelines.Logger.csproj" />
     </ItemGroup>
 
 </Project>

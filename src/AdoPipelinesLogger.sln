@@ -4,7 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelines.Logger", "AdoP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelinesLogger.Tests", "AdoPipelinesLogger.Tests\AdoPipelinesLogger.Tests.csproj", "{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelines.Logger.Sample", "AdoPipelines.Logger.Sample\AdoPipelines.Logger.Sample.csproj", "{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelines.Logger.Sample", "..\examples\AdoPipelines.Logger.Sample\AdoPipelines.Logger.Sample.csproj", "{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{07BC9F67-D23F-4062-9A66-A4E966D49C7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +22,12 @@ Global
 		{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D29DAF2C-5335-4D58-89D5-65ECFD95B4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D} = {07BC9F67-D23F-4062-9A66-A4E966D49C7F}
 	EndGlobalSection
 EndGlobal
