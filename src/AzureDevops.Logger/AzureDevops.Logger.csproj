@@ -5,6 +5,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
+        <AssemblyName>AzureDevops.Logger</AssemblyName>
+        <RootNamespace>AzureDevops.Logger</RootNamespace>
     </PropertyGroup>
 
 </Project>

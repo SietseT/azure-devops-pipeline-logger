@@ -1,8 +1,8 @@
-using AdoPipelines.Logger.Enums;
+using AzureDevops.Logger.Enums;
 
-namespace AdoPipelines.Logger.Abstractions 
+namespace AzureDevops.Logger.Abstractions 
 {
-    public interface IAdoPipelinesLogger
+    public interface IAzDOLogger
     {
         void Log(LogFormat logFormat, string message);
 
@@ -11,6 +11,6 @@ namespace AdoPipelines.Logger.Abstractions
 
         void LogCommand(string command, string value, Dictionary<string, string>? parameters = null);
         void LogProgress(string message, int progress);
-        void StartLogGroup(string groupName, Action<IAdoPipelinesLogger> logger);
+        void StartLogGroup(string groupName, Action<IAzDOLogger> logger);
     }
 }

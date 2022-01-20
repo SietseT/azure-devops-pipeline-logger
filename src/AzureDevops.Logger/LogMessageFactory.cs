@@ -1,8 +1,8 @@
 using System.Text;
-using AdoPipelines.Logger.Abstractions;
-using AdoPipelines.Logger.Enums;
+using AzureDevops.Logger.Abstractions;
+using AzureDevops.Logger.Enums;
 
-namespace AdoPipelines.Logger
+namespace AzureDevops.Logger
 {
     public class LogMessageFactory : ILogMessageFactory
     {

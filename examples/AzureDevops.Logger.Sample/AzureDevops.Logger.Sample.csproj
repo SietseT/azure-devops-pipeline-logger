@@ -5,6 +5,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AssemblyName>AzureDevops.Logger.Sample</AssemblyName>
+        <RootNamespace>AzureDevops.Logger.Sample</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\AdoPipelines.Logger\AdoPipelines.Logger.csproj" />
+      <ProjectReference Include="..\..\src\AzureDevops.Logger\AzureDevops.Logger.csproj" />
     </ItemGroup>
 
 </Project>

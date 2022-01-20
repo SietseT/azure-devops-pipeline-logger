@@ -5,10 +5,6 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
-
-        <AssemblyName>AdoPipelines.Logger.Tests</AssemblyName>
-
-        <RootNamespace>AdoPipelines.Logger.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AdoPipelines.Logger\AdoPipelines.Logger.csproj" />
+      <ProjectReference Include="..\AzureDevops.Logger\AzureDevops.Logger.csproj" />
     </ItemGroup>
 
 </Project>

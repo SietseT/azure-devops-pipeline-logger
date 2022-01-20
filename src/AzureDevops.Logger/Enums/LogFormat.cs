@@ -1,4 +1,4 @@
-namespace AdoPipelines.Logger.Enums
+namespace AzureDevops.Logger.Enums
 {
     public enum LogFormat
     {

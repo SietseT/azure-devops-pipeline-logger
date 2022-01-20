@@ -1,6 +1,7 @@
 ﻿using AdoPipelines.Logger;
-using AdoPipelines.Logger.Enums;
 using AdoPipelines.Logger.Sample;
+using AzureDevops.Logger;
+using AzureDevops.Logger.Enums;
 using CommandLine;
 
 Parser.Default.ParseArguments<Options>(args)
@@ -30,7 +31,7 @@ static void RunOptions(Options options)
 
 static void Log()
 {
-    var logger = new AdoPipelinesLogger(new LogMessageFactory());
+    var logger = new AzDoLogger(new LogMessageFactory());
     logger.Log(LogFormat.Section, "This is a section message");
     logger.Log(LogFormat.Command, "This is a command message");
     logger.Log(LogFormat.Debug, "This is a debug message");
@@ -41,7 +42,7 @@ static void Log()
 
 static void LogGroup()
 {
-    var logger = new AdoPipelinesLogger(new LogMessageFactory());
+    var logger = new AzDoLogger(new LogMessageFactory());
     logger.StartLogGroup("This is a group", pipelinesLogger =>
     {
         pipelinesLogger.Log(LogFormat.Section, "This is a section message");
@@ -54,7 +55,7 @@ static void LogGroup()
 
 static void LogIssue()
 {
-    var logger = new AdoPipelinesLogger(new LogMessageFactory());
+    var logger = new AzDoLogger(new LogMessageFactory());
     logger.Log(LogFormat.Section, "The two loglines below will show up in the build log of the pipeline.");
     logger.LogIssue(LogIssueType.Warning, "This is a warning message");
     logger.LogIssue(LogIssueType.Error, "This is a error message");
@@ -62,7 +63,7 @@ static void LogIssue()
 
 static void LogCommand()
 {
-    var logger = new AdoPipelinesLogger(new LogMessageFactory());
+    var logger = new AzDoLogger(new LogMessageFactory());
     logger.LogCommand("task.setvariable", "secretvalue",  new Dictionary<string, string>
     {
         {"variable", "secret"},
@@ -72,7 +73,7 @@ static void LogCommand()
 
 static void LogProgress()
 {
-    var logger = new AdoPipelinesLogger(new LogMessageFactory());
+    var logger = new AzDoLogger(new LogMessageFactory());
     for (var i = 0; i <= 100; i += 10)
     {
         Thread.Sleep(3000);

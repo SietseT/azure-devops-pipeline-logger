@@ -1,13 +1,13 @@
-using AdoPipelines.Logger.Abstractions;
-using AdoPipelines.Logger.Enums;
+using AzureDevops.Logger.Abstractions;
+using AzureDevops.Logger.Enums;
 
-namespace AdoPipelines.Logger
+namespace AzureDevops.Logger
 {
-    public class AdoPipelinesLogger : IAdoPipelinesLogger
+    public class AzDoLogger : IAzDOLogger
     {
         private readonly ILogMessageFactory _logMessageFactory;
 
-        public AdoPipelinesLogger(ILogMessageFactory logMessageFactory)
+        public AzDoLogger(ILogMessageFactory logMessageFactory)
         {
             _logMessageFactory = logMessageFactory;
         }
@@ -40,7 +40,7 @@ namespace AdoPipelines.Logger
             Console.WriteLine(logMessage);
         }
 
-        public void StartLogGroup(string groupName, Action<IAdoPipelinesLogger> logger)
+        public void StartLogGroup(string groupName, Action<IAzDOLogger> logger)
         {
             var startGroupMessage = _logMessageFactory.BuildLog(LogFormat.Group, groupName);
             Console.WriteLine(startGroupMessage);

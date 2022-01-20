@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using AdoPipelines.Logger.Enums;
 using AutoFixture.NUnit3;
+using AzureDevops.Logger;
+using AzureDevops.Logger.Enums;
 using FluentAssertions;
 using NUnit.Framework;
 

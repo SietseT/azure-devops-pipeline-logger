@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelines.Logger", "AdoPipelines.Logger\AdoPipelines.Logger.csproj", "{31539674-920C-43D9-9838-BD0B25A5FD8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevops.Logger", "AzureDevops.Logger\AzureDevops.Logger.csproj", "{31539674-920C-43D9-9838-BD0B25A5FD8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelinesLogger.Tests", "AdoPipelinesLogger.Tests\AdoPipelinesLogger.Tests.csproj", "{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevops.Logger.Tests", "AzureDevops.Logger.Tests\AzureDevops.Logger.Tests.csproj", "{5C2F87D4-D293-4BF2-B498-C07FF37E8B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoPipelines.Logger.Sample", "..\examples\AdoPipelines.Logger.Sample\AdoPipelines.Logger.Sample.csproj", "{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDevops.Logger.Sample", "..\examples\AzureDevops.Logger.Sample\AzureDevops.Logger.Sample.csproj", "{AEB584B3-7D00-43EA-86DB-7DCD4661BD4D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{07BC9F67-D23F-4062-9A66-A4E966D49C7F}"
 EndProject
