@@ -16,8 +16,11 @@ stages:
   jobs:
   - job: Build
     steps:
-    - task: NuGetToolInstaller@1
-      displayName: "Install NuGet tool"
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6.x'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'
 
     - task: DotNetCoreCLI@2
       displayName: "dotnet build"
