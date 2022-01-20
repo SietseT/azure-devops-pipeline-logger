@@ -16,6 +16,17 @@ stages:
   jobs:
   - job: Build
     steps:
+    
+    - task: gitversion/setup@0
+      displayName: 'Setup GitVersion'
+      inputs:
+        versionSpec: '5.x'
+
+    - task: gitversion/execute@0
+      displayName: 'Determine version'
+      inputs:
+        useConfigFile: true
+        configFilePath: '$(System.DefaultWorkingDirectory)\src\GitVersion.yml'
     - task: UseDotNet@2
       displayName: 'Use .NET 6.x'
       inputs:
