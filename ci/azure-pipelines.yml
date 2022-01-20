@@ -33,4 +33,10 @@ stages:
       inputs:
         command: 'test'
         projects: '**/*Tests.csproj'
-        arguments: '--no-build'
+        arguments: '--no-build --collect:"XPlat Code Coverage'
+
+    - task: PublishCodeCoverageResults@1
+      displayName: 'Publish code coverage results'
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: $(Agent.TempDirectory)/*/coverage.cobertura.xml
