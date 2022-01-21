@@ -87,6 +87,7 @@ stages:
                 itemPattern: '**.nupkg'
                 targetPath: '$(Pipeline.Workspace)\nuget'
             - task: NuGetCommand@2
+              displayName: "Push package to nuget.org"
               inputs:
                 command: 'push'
                 packagesToPush: '$(Pipeline.Workspace)/nuget/*.nupkg;!$(Pipeline.Workspace)/nuget/*.symbols.nupkg'
