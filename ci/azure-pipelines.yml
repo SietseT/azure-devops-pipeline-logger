@@ -71,12 +71,12 @@ stages:
 
 - stage: Publish
   jobs:
-  - deployment: publishpackage   # name of the deployment job, A-Z, a-z, 0-9, and underscore. The word "deploy" is a keyword and is unsupported as the deployment name.
-    displayName: "Publish NuGet package"  # friendly name to display in the UI
+  - deployment: publishpackage
+    displayName: "Publish NuGet package"
     condition: succeeded()
     environment: nuget-org
     strategy:
-      runOnce:    #rolling, canary are the other strategies that are supported
+      runOnce:
         deploy:
           steps:
             - task: DownloadPipelineArtifact@2
