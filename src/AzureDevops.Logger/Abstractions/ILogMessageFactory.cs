@@ -1,6 +1,6 @@
-using AzureDevops.Logger.Enums;
+using AzureDevOps.Logger.Enums;
 
-namespace AzureDevops.Logger.Abstractions
+namespace AzureDevOps.Logger.Abstractions
 {
     public interface ILogMessageFactory
     {

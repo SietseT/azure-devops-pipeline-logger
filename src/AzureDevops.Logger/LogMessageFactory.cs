@@ -1,8 +1,8 @@
 using System.Text;
-using AzureDevops.Logger.Abstractions;
-using AzureDevops.Logger.Enums;
+using AzureDevOps.Logger.Abstractions;
+using AzureDevOps.Logger.Enums;
 
-namespace AzureDevops.Logger
+namespace AzureDevOps.Logger
 {
     public class LogMessageFactory : ILogMessageFactory
     {

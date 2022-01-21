@@ -1,6 +1,6 @@
 using CommandLine;
 
-namespace AdoPipelines.Logger.Sample;
+namespace AzureDevOps.Logger.Sample;
 
 public class Options
 {

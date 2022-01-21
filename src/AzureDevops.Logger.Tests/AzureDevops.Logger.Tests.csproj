@@ -5,6 +5,10 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
+
+        <AssemblyName>AzureDevOps.Logger.Tests</AssemblyName>
+
+        <RootNamespace>AzureDevOps.Logger.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
