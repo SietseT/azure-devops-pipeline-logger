@@ -36,5 +36,6 @@ When submitting a pull request to the [GitHub repository][github] make sure to d
 - Check that new and updated code follows the existing code formatting and naming standard
 - Run unit tests to ensure no existing functionality has been affected
 - Write new unit tests to test your changes. All features and fixed bugs must have tests to verify they work
+- Verify that the `CodeQL and tests` check has been run successfully for your PR
 
 Read [GitHub Help][pullrequesthelp] for more details about creating pull requests.

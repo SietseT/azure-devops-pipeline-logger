@@ -113,3 +113,6 @@ The result is the following log command:
 ```
 ##vso[task.setvariable variable=secret;issecret=true;]secretvalue
 ```
+
+## Contributing
+See [Contributing guidelines](CONTRIBUTING.md).
