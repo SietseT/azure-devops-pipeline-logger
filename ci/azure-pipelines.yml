@@ -59,4 +59,4 @@ stages:
         packagesToPack: '**/AzureDevops.Logger.csproj'
         nobuild: true
         versioningScheme: 'off'
-        buildProperties: '-p:PackageVersion=$(NuGetVersionV2)'
+        buildProperties: '/p:PackageVersion=$(NuGetVersionV2)'
