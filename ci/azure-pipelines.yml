@@ -38,7 +38,7 @@ stages:
       inputs:
         command: 'build'
         projects: '**/*.csproj'
-        arguments: '--configuration $(buildConfiguration) /:Version=$(NuGetVersionV2)'
+        arguments: '--configuration $(buildConfiguration) /p:Version=$(NuGetVersionV2)'
 
     - task: DotNetCoreCLI@2
       displayName: "dotnet test"
