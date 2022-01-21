@@ -5,8 +5,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <AssemblyName>AzureDevops.Logger.Sample</AssemblyName>
-        <RootNamespace>AzureDevops.Logger.Sample</RootNamespace>
+        <AssemblyName>AzureDevOps.Logger.Sample</AssemblyName>
+        <RootNamespace>AzureDevOps.Logger.Sample</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

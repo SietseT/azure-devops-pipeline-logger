@@ -1,13 +1,13 @@
-using AzureDevops.Logger.Abstractions;
-using AzureDevops.Logger.Enums;
+using AzureDevOps.Logger.Abstractions;
+using AzureDevOps.Logger.Enums;
 
-namespace AzureDevops.Logger
+namespace AzureDevOps.Logger
 {
-    public class AzDoLogger : IAzDOLogger
+    public class AzDOLogger : IAzDOLogger
     {
         private readonly ILogMessageFactory _logMessageFactory;
 
-        public AzDoLogger(ILogMessageFactory logMessageFactory)
+        public AzDOLogger(ILogMessageFactory logMessageFactory)
         {
             _logMessageFactory = logMessageFactory;
         }

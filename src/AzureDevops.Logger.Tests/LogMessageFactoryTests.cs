@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using AutoFixture.NUnit3;
-using AzureDevops.Logger;
-using AzureDevops.Logger.Enums;
+using AzureDevOps.Logger.Enums;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace AdoPipelines.Logger.Tests;
+namespace AzureDevOps.Logger.Tests;
 
 public class LogMessageFactoryTests
 {

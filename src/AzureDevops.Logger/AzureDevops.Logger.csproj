@@ -5,8 +5,21 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
-        <AssemblyName>AzureDevops.Logger</AssemblyName>
-        <RootNamespace>AzureDevops.Logger</RootNamespace>
+        <AssemblyName>AzureDevOps.Logger</AssemblyName>
+        <RootNamespace>AzureDevOps.Logger</RootNamespace>
+        <PackageVersion />
+        <Title>AzureDevOps.Logger</Title>
+        <Authors>Sietse Trommelen</Authors>
+        <Description>Provides simple logging interface to log messages specific to Azure DevOps Pipelines.</Description>
+        <Copyright>Sietse Trommelen</Copyright>
+        <PackageProjectUrl>https://github.com/SietseT/azure-devops-pipeline-logger</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/SietseT/azure-devops-pipeline-logger</RepositoryUrl>
+        <PackageTags>azure devops logging pipelines logger</PackageTags>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE.txt" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
 </Project>

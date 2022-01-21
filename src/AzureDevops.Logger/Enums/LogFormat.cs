@@ -1,4 +1,4 @@
-namespace AzureDevops.Logger.Enums
+namespace AzureDevOps.Logger.Enums
 {
     public enum LogFormat
     {
