@@ -15,6 +15,11 @@
         <PackageProjectUrl>https://github.com/SietseT/azure-devops-pipeline-logger</PackageProjectUrl>
         <RepositoryUrl>https://github.com/SietseT/azure-devops-pipeline-logger</RepositoryUrl>
         <PackageTags>azure devops logging pipelines logger</PackageTags>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE.txt" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
 </Project>
