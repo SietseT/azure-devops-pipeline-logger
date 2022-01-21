@@ -2,7 +2,7 @@
 [![CodeQL and tests](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml) ![Nuget](https://img.shields.io/nuget/v/AzureDevOps.Logger)
 
 
-Provides simple logging interface to log commands specific to Azure DevOps Pipelines. It is available in the form of a NuGet package. 
+Provides simple logging interface to log commands specific to Azure DevOps Pipelines. It is available in the form of a [NuGet](https://www.nuget.org/packages/AzureDevOps.Logger/1.0.0) package. 
 
 The package exposes a simple logger class where called methods will be converted to the appropiate log commands defined by Microsoft. For example:
 ```csharp
