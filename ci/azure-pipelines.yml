@@ -54,9 +54,17 @@ stages:
         summaryFileLocation: $(Agent.TempDirectory)/*/coverage.cobertura.xml
 
     - task: DotNetCoreCLI@2
+      displayName: 'dotnet pack'
       inputs:
         command: 'pack'
         packagesToPack: '**/AzureDevops.Logger.csproj'
         nobuild: true
         versioningScheme: 'byEnvVar'
         versionEnvVar: 'NuGetVersionV2'
+
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish pipeline artifact'
+      inputs:
+        targetPath: '$(Build.ArtifactStagingDirectory)'
+        artifact: 'nuget'
+        publishLocation: 'pipeline'
