@@ -7,6 +7,14 @@
         <LangVersion>10</LangVersion>
         <AssemblyName>AzureDevops.Logger</AssemblyName>
         <RootNamespace>AzureDevops.Logger</RootNamespace>
+        <PackageVersion />
+        <Title>AzureDevops.Logger</Title>
+        <Authors>Sietse Trommelen</Authors>
+        <Description>Provides simple logging interface to log messages specific to Azure DevOps Pipelines.</Description>
+        <Copyright>Sietse Trommelen</Copyright>
+        <PackageProjectUrl>https://github.com/SietseT/azure-devops-pipeline-logger</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/SietseT/azure-devops-pipeline-logger</RepositoryUrl>
+        <PackageTags>azure devops logging pipelines logger</PackageTags>
     </PropertyGroup>
 
 </Project>
