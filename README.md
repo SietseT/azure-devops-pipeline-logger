@@ -1,5 +1,5 @@
 # Azure DevOps Pipeline Logger
-[![Build Status](https://dev.azure.com/sietsetrommelen/Sito/_apis/build/status/azure-devops-pipeline-logger/SietseT.azure-devops-pipeline-logger?branchName=main)](https://dev.azure.com/sietsetrommelen/Sito/_build/latest?definitionId=19&branchName=main) [![CodeQL and tests](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml) ![Nuget](https://img.shields.io/nuget/v/AzureDevOps.Logger)
+[![CodeQL and tests](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml) ![Nuget](https://img.shields.io/nuget/v/AzureDevOps.Logger)
 
 
 Provides simple logging interface to log commands specific to Azure DevOps Pipelines. It is available in the form of a NuGet package. 
