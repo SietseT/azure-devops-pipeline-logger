@@ -16,7 +16,6 @@ stages:
   jobs:
   - job: Build
     steps:
-    
     - task: gitversion/setup@0
       displayName: 'Setup GitVersion'
       inputs:
@@ -68,3 +67,28 @@ stages:
         targetPath: '$(Build.ArtifactStagingDirectory)'
         artifact: 'nuget'
         publishLocation: 'pipeline'
+
+
+- stage: Publish
+  jobs:
+  - deployment: publishpackage   # name of the deployment job, A-Z, a-z, 0-9, and underscore. The word "deploy" is a keyword and is unsupported as the deployment name.
+    displayName: "Publish NuGet package"  # friendly name to display in the UI
+    condition: succeeded()
+    environment: nuget-org
+    strategy:
+      runOnce:    #rolling, canary are the other strategies that are supported
+        deploy:
+          steps:
+            - task: DownloadPipelineArtifact@2
+              displayName: "Download pipeline artifact"
+              inputs:
+                buildType: 'current'
+                artifactName: 'nuget'
+                itemPattern: '**.nupkg'
+                targetPath: '$(Pipeline.Workspace)\nuget'
+            - task: NuGetCommand@2
+              inputs:
+                command: 'push'
+                packagesToPush: '$(Pipeline.Workspace)/nuget/*.nupkg;!$(Pipeline.Workspace)/nuget/*.symbols.nupkg'
+                nuGetFeedType: 'external'
+                publishFeedCredentials: 'nuget.org'
