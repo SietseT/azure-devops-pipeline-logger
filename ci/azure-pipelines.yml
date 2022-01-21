@@ -54,10 +54,8 @@ stages:
         summaryFileLocation: $(Agent.TempDirectory)/*/coverage.cobertura.xml
 
     - task: DotNetCoreCLI@2
-      displayName: 'dotnet pack'
       inputs:
         command: 'pack'
         packagesToPack: '**/AzureDevops.Logger.csproj'
-        nobuild: true
         versioningScheme: 'off'
-        buildProperties: '/p:PackageVersion=$(NuGetVersionV2)'
+        buildProperties: '--no-build --configuration $(buildConfiguration) /p:PackageVersion=$(NuGetVersionV2)'
