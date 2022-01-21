@@ -10,7 +10,7 @@
         <PackageVersion />
         <Title>AzureDevOps.Logger</Title>
         <Authors>Sietse Trommelen</Authors>
-        <Description>Provides simple logging interface to log messages specific to Azure DevOps Pipelines.</Description>
+        <Description>Provides simple logging interface to log commands specific to Azure DevOps Pipelines.</Description>
         <Copyright>Sietse Trommelen</Copyright>
         <PackageProjectUrl>https://github.com/SietseT/azure-devops-pipeline-logger</PackageProjectUrl>
         <RepositoryUrl>https://github.com/SietseT/azure-devops-pipeline-logger</RepositoryUrl>
@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.22" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
     </ItemGroup>
 
 </Project>
