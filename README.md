@@ -2,9 +2,9 @@
 [![CodeQL and tests](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/SietseT/azure-devops-pipeline-logger/actions/workflows/codeql-analysis.yml) ![Nuget](https://img.shields.io/nuget/v/AzureDevOps.Logger)
 
 
-Provides simple logging interface to log commands specific to Azure DevOps Pipelines. It is available in the form of a [NuGet](https://www.nuget.org/packages/AzureDevOps.Logger/1.0.0) package. 
+Simple .NET package to log specific Azure DevOps commands during a pipeline run. A use-case could be when you're developing a custom console application (e.g. a CLI tool) that is used in Azure DevOps pipelines. This package enables you to send [logging commands](https://docs.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands?view=azure-devops&tabs=bash) to the pipeline in a simple and easy way.
 
-The package exposes a simple logger class where called methods will be converted to the appropiate log commands defined by Microsoft. For example:
+The package exposes a logger class where called methods will be converted to the appropiate log commands defined by Microsoft. For example:
 ```csharp
 logger.LogCommand("task.setvariable", "secretvalue",  new Dictionary<string, string>
 {
@@ -17,7 +17,7 @@ results in the following command being logged to the pipeline:
 ##vso[task.setvariable variable=secret;issecret=true;]secretvalue
 ```
 
-An example of where this can be used is in your custom CLI tool that is used in pipelines. A complete reference of logging commands can be found in the [Microsoft Docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands?view=azure-devops&tabs=bash).
+A complete reference of logging commands can be found in the [Microsoft Docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands?view=azure-devops&tabs=bash).
 
 ## Features
 - Log messages with supported severity levels
